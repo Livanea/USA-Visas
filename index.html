@@ -69,9 +69,19 @@
             </div>
           </div> 
        <!--label-->
-       <canvas id="labelCanvas" >
-        Your browser does not support the HTML5 canvas tag.</canvas>
-        
+        <div class="colorlabel">
+          <div id="zero"></div>
+          <div id="um"></div>
+          <div id="dois"></div>
+          <div id="tres"></div>
+          <div id="quatro"></div>
+          <div id="cinco"></div>
+          <div id="seis"></div>
+          <div id="sete"></div>
+          <div id="oito"></div>
+          <div id="nove"></div>
+          <div id="dez"></div>
+        </div>
         <div class="label">
           <p>Not data available</p>
           <p>> 50 - < 99 </p>
@@ -159,12 +169,14 @@
         padding:8px 55px;
         margin-right: 0;
       }
-      #labelCanvas{
-        position: absolute;
-        bottom: 10px;
-        width: 300px;
-        height:100px; 
-        border:1px solid #e42a2a;
+      .colorlabel{
+        z-index: 2;
+        margin-top: 120px;
+        margin-left: 0px;
+        height: 100px;
+        text-align: left;
+        font-size: .8em;
+        border: 1px solid green;
       }
       .label{
         margin-top: 120px;
