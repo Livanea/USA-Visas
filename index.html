@@ -184,7 +184,6 @@
         font-size: .8em;
       }
 
-
     </style>
     <!--Json file-->
     <script>
@@ -195,7 +194,7 @@
           document.getElementById("dropcountries").innerHTML = '<a class="dropdown-item" href="#"'> + nameCountry.country +'</a>';
         }
       };
-      xmlhttp.open("GET", "countries_2014.json", true);
+      xmlhttp.open("GET", "/json/countries_2014.json", true);
       xmlhttp.send();
 </script>
          
