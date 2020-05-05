@@ -33,14 +33,22 @@
             <h2 id="years" class="sub">2014</h2>
               <button class="btn btn-secondary dropdown-toggle" type="button" id="yearMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
               <div class="dropdown-menu dropdown-menu-right">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="index.html">2014</a>
+                <a class="dropdown-item" href="#">2013</a>
+                <a class="dropdown-item" href="#">2012</a>
+                <a class="dropdown-item" href="#">2011</a>
+                <a class="dropdown-item" href="#">2010</a>
+                <a class="dropdown-item" href="#">2009</a>
+                <a class="dropdown-item" href="#">2008</a>
+                <a class="dropdown-item" href="#">2007</a>
+                <a class="dropdown-item" href="#">2006</a>
+                <a class="dropdown-item" href="#">2005</a>
+                
               </div>  
           </div>
           <!--dropdown menu - countries-->
           <div class="btn-group">
-            <h2 id="coutries" class="sub">Worldwide</h2>
+            <h2 id="coutries" class="sub"></h2>
               <button class="btn btn-secondary dropdown-toggle" type="button" id="yearMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
               <div id="dropcountries" class="dropdown-menu dropdown-menu-right">
                
@@ -59,6 +67,7 @@
           </div>  
           
           <!--toggle - type of visas-->
+          
           <div class="dropdown">
             <div id="tvisas"class="dropmenu">
               <h2 id="years" class="sub">Graph View</h2>
@@ -67,33 +76,99 @@
               </div>
             </div>
           </div> 
-       <!--label-->
-        <div class="colorlabel">
-          <div id="zero"></div>
-          <div id="um"></div>
-          <div id="dois"></div>
-          <div id="tres"></div>
-          <div id="quatro"></div>
-          <div id="cinco"></div>
-          <div id="seis"></div>
-          <div id="sete"></div>
-          <div id="oito"></div>
-          <div id="nove"></div>
-          <div id="dez"></div>
+
+          <!--label-->
+          <div class="container">
+            <div class="row">
+              <div class="col-sm colorlabel" style="background-color:#dcddde;">
+              </div>
+              <div class="col-sm label">
+                <p>No data</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm colorlabel" style="background-color:#abd037;">
+                  <div id="um"></div>
+              </div>
+              <div class="col-sm label">
+                <p>< 50 </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm colorlabel" style="background-color: #40FF21">
+                  <div id="dois"></div>
+              </div>
+              <div class="col-sm label">
+                <p>> 50 - < 99 </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm colorlabel" style="background-color: #0DFFFF">
+                  <div id="tres"></div>
+              </div>
+              <div class="col-sm label">
+                <p>> 100 - < 499 </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm colorlabel" style="background-color: #986FE8">
+                  <div id="quatro"></div>
+              </div>
+              <div class="col-sm label">
+                <p>> 500 - < 999 </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm colorlabel" style="background-color: #550CE8">
+                  <div id="cinco"></div>
+              </div>
+              <div class="col-sm label">
+                <p>> 1,000 - < 4,999 </p>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm colorlabel" style="background-color: #FFEA00">
+                  <div id="seis"></div>
+              </div>
+              <div class="col-sm label">
+                <p>> 5,000 - < 9,999 </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm colorlabel" style="background-color: #E8B00C">
+                  <div id="sete"></div>
+              </div>
+              <div class="col-sm label">
+                <p>> 10,000 - < 49,999 </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm colorlabel" style="background-color: #f58020">
+                  <div id="oito"></div>
+              </div>
+              <div class="col-sm label">
+                <p>> 50,000 - < 99,999 </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm colorlabel" style="background-color: #FF1400">
+                  <div id="nove"></div>
+              </div>
+              <div class="col-sm label">
+                <p>> 100,000 - < 499,999 </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm colorlabel" style="background-color: #8b0b04">
+                  <div id="dez"></div>
+              </div>
+              <div class="col-sm label">
+                <p>> 500,000</p></499>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="label">
-          <p>Not data available</p>
-          <p>> 50 - < 99 </p>
-          <p>> 100 - < 499 </p>
-          <p>> 500 - < 999 </p>
-          <p>> 1,000 - < 4,999 </p>
-          <p>> 5,000 - < 9,999 </p>
-          <p>> 10,000 - < 49,999 </p>
-          <p>> 50,000 - < 99,999 </p>
-          <p>> 100,000 - < 499,999 </p>
-          <p>> 500,000</p>
-        </div>
-      </div>
  
       </main>      
     <style>
@@ -108,7 +183,7 @@
       }
       header{
         border-bottom: 1px solid #96B30C;
-        height: 140px;
+        height: 135px;
       }
       #logo{
         width: 300px;
@@ -116,13 +191,12 @@
       .menu{
         position: absolute;
         right:0;
-        width: 300px;
-       border: 1px solid orangered;
+        width: 270px;
       }
       .btn-group{
         display: inline-block;
         border-bottom: 1px solid #96B30C;
-        width: 300px;
+        width: 270px;
       }
       .sub{
         font-size: 1em;
@@ -133,7 +207,7 @@
       }
       .btn{
         position: absolute;
-        right: -250px;
+        left: 220px;
         display: inline-block;
         vertical-align: middle;
         background-color:#fff;
@@ -159,8 +233,11 @@
         border-radius: 0;
         margin-top: -1px;
         margin-right: -5px;
-        width:300px;
+        width:270px;
         padding: 0 5px;
+        max-height: 300px;
+        
+        overflow-y: scroll;
       }
       .dropdown-item{
         text-align: right;
@@ -168,34 +245,50 @@
         padding:8px 55px;
         margin-right: 0;
       }
+      .container{
+        top: 45px;
+        margin: 0;
+        padding: 0;
+        
+        position: relative;
+        align-items: baseline;
+        align-content: center;
+
+      }
+      .row{
+        margin: 0;
+        padding: 0;
+        
+      }
       .colorlabel{
-        z-index: 2;
-        margin-top: 120px;
-        margin-left: 0px;
-        height: 100px;
-        text-align: left;
-        font-size: .8em;
-        border: 1px solid green;
+        margin: 7px 0px;
+        height: 25px;
       }
       .label{
-        margin-top: 120px;
-        margin-left: 120px;
+        height: 22px;
+        margin: 10px 0px 7px;
         text-align: left;
         font-size: .8em;
+        flex-grow: 2.5;
       }
 
     </style>
     <!--Json file-->
     <script>
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          var nameCountry = JSON.parse(this.responseText);
-          document.getElementById("dropcountries").innerHTML = '<a class="dropdown-item" href="#"'> + nameCountry.country +'</a>';
+
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', '/json/countries_2014.json', true);
+
+      xhr.onload = function(e) {
+        if (this.status == 200) {
+          var data = JSON.parse(this.responseText);
+          console.log(data.lenght);
+          for (var i = 0; i < data.lenght; i++){
+            document.getElementById("dropcountries").innerHTML = '<a class="dropdown-item" href="#">'+data[i].country+'</a>'
+          }
         }
       };
-      xmlhttp.open("GET", "/json/countries_2014.json", true);
-      xmlhttp.send();
+      xhr.send();
 </script>
          
     </body>
