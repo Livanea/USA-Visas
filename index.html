@@ -280,7 +280,7 @@
       xhr.open('GET', '/json/countries_2014.json', true);
 
       xhr.onload = function(e) {
-        if (this.status == 200) {
+        if (this.status == 204) {
           var data = JSON.parse(this.responseText);
           console.log(data.lenght);
           for (var i = 0; i < data.lenght; i++){
