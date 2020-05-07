@@ -21,12 +21,11 @@
       <main>
         <!--Map and graph here-->
         <div class="section1" id="section">
-          <img src="img/map.png" alt="map showing the data - quantity of visas issued to country" class="map">
-          <button type="button" title="Canada" id='canada' class='countrybt'></button>
-          <button type="button" title="Portugal" id='portugal' class='countrybt'></button>
-          <button type="button" title="Mongolia" id='mongolia' class='countrybt'></button>
-          <button type="button" title="Algeria" id='algeria' class='countrybt'></button>
+            <img src="img/graph.png" alt="graph showing the data - quantity of visas issued to country" class="graph" id="graph">
+            <button type="button" title="11,676" id='algeria' class='countrybt'></button>
+            <button type="button" title="9,898" id='mongolia' class='countrybt'></button>
 
+          </div>
         </div>
         <div class="menu" id="menu">
           <!--dropdown menu - years-->
@@ -67,19 +66,19 @@
           <!--toggle -View-->
           <div class="dropdown">
             <div id="view"class="dropmenu">
-              <h2 id="swipe" class="sub">Graph View</h2>
+              <h2 id="swipe" class="sub">Map View</h2>
               <div id="toggle">
                 <div class="switch-field">
-                  <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
+                  <input type="radio" id="radio-one" name="switch-one" value="no" />
                   <label for="radio-one"></label>
-                  <input type="radio" id="radio-two" name="switch-one" value="no" />
+                  <input type="radio" id="radio-two" name="switch-one" value="yes" checked/>
                   <label for="radio-two"></label>
                 </div>
               </div>
             </div>
           </div> 
 
-          <!--label-->
+          <!--label
           <div id="label" class="container">
             <div class="row">
               <div class="col-sm colorlabel" style="background-color:#dcddde;">
@@ -169,7 +168,7 @@
                 <p>> 500,000</p></499>
               </div>
             </div>
-          </div>
+          </div>-->
         </div>
  
       </main>      
@@ -194,21 +193,22 @@
       main{
         display: grid;
         grid-template-areas: 'section menu';
-        grid-template-columns: auto 290px;
+        grid-template-columns: 100% 290px;
       }
       .section1{
         grid-area: section;
         width: auto;
-        
+        height:600px;
         margin: 0;
         contain: content;
         overflow-x: auto;
         overflow-y: hidden;
       }
-      .map{
+      .graph{
         width: auto;
         height: inherit;
         text-align: center;
+        padding: 40px 40px 20px;
       }
       .countrybt{
         position: absolute;
@@ -217,38 +217,27 @@
         border: none;
         background-color:transparent;
       }
-      #canada{
-        left: 200px;
-        top:80px;
-        width: 200px;
-        height: 120px;
-      }
-      #portugal{
-        left: 540px;
-        top:215px;
-        width: 10px;
-        height: 20px;
+      #algeria{
+        left: 95px;
+        top:300px;
+        width: 22px;
+        height: 190px;
       }
       #mongolia{
-        left: 800px;
-        top:180px;
-        width: 70px;
-        height: 45px;
+        left: 2080px;
+        top:400px;
+        width: 22px;
+        height: 90px;
       }
-      #algeria{
-        left: 560px;
-        top:235px;
-        width: 30px;
-        height: 45px;
-        transform: skew(-15deg);
-      }
-      
       .menu{
         grid-area: menu;
         position: absolute;
         right:0;
         width: 290px;
+        height: 160px;
+        z-index: 4;
         background-color: #fff;
+        box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.24);
       }
       .btn-group{
         display: inline-block;
@@ -310,6 +299,7 @@
         padding: 0;
         align-items: baseline;
         align-content: center;
+
       }
       .row{
         margin: 0;
@@ -318,7 +308,8 @@
       }
       .colorlabel{
         margin: 7px 0px;
-        height: 25px;      
+        height: 25px;
+             
       }
       .label{
         height: 22px;
@@ -415,44 +406,33 @@
       };
       xhr1.send();
       
- //height for the map & subtile innerHeight
- 
+ //height for the subtile
  function labelBottom(){
-  var h = window.innerHeight;
-  var w = window.innerWidth;
-  var x = h-135;
-    document.getElementById("menu").style.height = x + "px";
-    document.getElementById("section").style.height = x + "px";
-  }
+  var h= window.innerHeight;
+        var x = h-135;
+        document.getElementById("menu").style.width =window.innerWidth;
+        document.getElementById("section").style.height = x + "px";
 
+  }
   labelBottom();
-  window.addEventListener("resize",labelBottom);
-//event on Countries  
-document.getElementById("canada").addEventListener("click", function(){
-  window.open("Canada.html", "_self");
-});
-document.getElementById("portugal").addEventListener("click", function(){
-  window.open("Portugal.html", "_self");
+  window.addEventListener("resize",labelBottom);   
+//event for toggle View
+document.getElementById("radio-one").addEventListener("click", mapview);
+function mapview(){
+  window.open("index.html", "_self");
+}
+//event for countries
+document.getElementById("algeria").addEventListener("click", function(){
+  window.open("Algeria.html", "_self");
 });
 document.getElementById("mongolia").addEventListener("click", function(){
   window.open("Mongolia.html", "_self");
 });
-document.getElementById("algeria").addEventListener("click", function(){
-  window.open("Algeria.html", "_self");
-});
-
-//event for toggle View
-document.getElementById("radio-two").addEventListener("click", graphview);
-function graphview(){
-  window.open("graph.html", "_self");
- 
-}
-
 //event for logo
 document.getElementById("logo").addEventListener("click", function(){
   window.open("index.html", "_self");
 });
-     
+
 </script>
          
     </body>
